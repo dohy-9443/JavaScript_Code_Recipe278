@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="button-wrapper">
+    <button class="button" data-age="20">20세 이상</button>
+    <button class="button" data-age="30">30세 이상</button>
+    <button class="button" data-age="40">40세 이상</button>
+  </div>
+
+  <ul class="user_list">
+
+  </ul>
+</body>
+
+<script>
+  const userDataList = [{
+      name: '곰',
+      age: 18
+    },
+    {
+      name: '여우',
+      age: 27
+    },
+    {
+      name: '사자',
+      age: 32
+    },
+    {
+      name: '얼룩말',
+      age: 41
+    },
+    {
+      name: '기린',
+      age: 56
+    },
+  ]
+
+  // .button 요소의 이벤트 설정
+  document.querySelectorAll('.button').forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      onClickBtn(e)
+    })
+  })
+
+  // 버튼 클릭시 처리
+
+  function onClickBtn(e) {
+    // 클릭한 버튼의 요소
+    const button = e.target
+
+    // 버튼 요소에서 data-age 가져오기
+    const targetAge = button.dataset.age
+
+    // targetAge 이상의 유저 배열 생성
+    const filterList = userDataList.filter((item) => item.age >= targetAge)
+
+    // 배열을 출력
+    updateList(filterList)
+  }
+
+  // 유저 배열을 출력
+  function updateList(filterList) {
+    let listHtml = '';
+
+    for (const data of filterList) {
+      const {
+        name,
+        age
+      } = data;
+
+      listHtml += `<li>${name} : ${age}</li>`
+    }
+
+    document.querySelector('.user_list').innerHTML = listHtml
+  }
+</script>
+
+</html>
