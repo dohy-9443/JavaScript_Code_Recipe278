@@ -19,3 +19,14 @@ const targetUser = arr1.find(el => el === '사자');
 // });
 
 console.log(targetUser);
+
+
+// findIndex()는 배열에서 조건을 만족하는 첫 번째 요소의 인덱스를 반환
+const myArray = ['사자', '곰', '여우', '양']
+
+// 배열에서 곰을 가져옴
+const targetIndex = myArray.findIndex(function(el) {
+  return el === '곰'
+})
+
+console.log(targetIndex)
