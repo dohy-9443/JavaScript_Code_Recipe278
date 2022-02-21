@@ -1,3 +1,9 @@
+const ulEl = document.querySelector('.jsUl');
+const jqueryUl = document.querySelector('.jqueryUl');
+const liEls = document.querySelectorAll('.jsLi');
+const jqueryBtn = document.querySelector('.jqueryBtn');
+const jsBtn = document.querySelector('.jsBtn');
+
 $(function(){
   $('.jqueryAnchor').on('click', function(){
     $('.jqueryAnchor').next('ul').stop().slideUp(300);
@@ -5,12 +11,16 @@ $(function(){
   })
 })
 
-const ulEl = document.querySelector('.jsUl');
-const liEls = document.querySelectorAll('.jsLi');
+jqueryBtn.addEventListener('click', function() {
+  jqueryUl.classList.toggle('on');
+})
+
+jsBtn.addEventListener('click', function() {
+  ulEl.classList.toggle('on')
+})
 
 function acodionClick (e) {
   const target = e.target;
-  // console.log(target)
   if (target.classList.contains('jsAnchor')) {
     target.parentNode.classList.toggle('on');
 
