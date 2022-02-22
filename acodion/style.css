@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* btn */
+.btn {
+  background: #FCA400;
+  width: 186px;
+  height: 50px;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* jQuery */
+.jqueryUl {
+  width: 500px;
+  border: 3px solid red;
+  margin: 100px auto;
+  display: none;
+}
+
+.jqueryUl.on {
+  display: block;
+}
+
+.jqueryLi {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.jqueryAnchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #FCA400;
+  color: #fff;
+  border-bottom: 1px solid #FFF;
+  box-sizing: border-box;
+}
+
+.jqueryLi>ul {
+  width: 100%;
+  display: none;
+}
+
+.jqueryLi>ul>li {
+  width: 100%;
+  height: 45px;
+}
+
+.jqueryLi>ul>li>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* JS */
+.jsUl {
+  width: 500px;
+  border: 3px solid red;
+  margin: 100px auto;
+  display: none;
+}
+
+.jsUl.on {
+  display: block;
+}
+
+.jsLi {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.jsAnchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: orange;
+  color: #fff;
+  border-bottom: 1px solid #FFF;
+  box-sizing: border-box;
+}
+
+.jsLi>ul {
+  width: 100%;
+  transition: all 0.3s;
+  height: 0;
+  overflow: hidden;
+}
+
+.jsLi.on>ul {
+  height: 135px;
+}
+
+.jsLi>ul>li {
+  width: 100%;
+  height: 45px;
+}
+
+.jsLi>ul>li>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

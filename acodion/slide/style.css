@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.slider-box {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.slide {
+  width: 100%;
+  height: 500px;
+  background-color: tan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.wrapper .slide:nth-child(2) {
+  background-color: cadetblue;
+}
+
+.wrapper .slide:last-child {
+  background-color: lightcoral;
+}
+
+.paging {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.paging button {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.paging button.active {
+  color: #fff;
+  background-color: #000;
+}
+
+.np {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.np button {
+  width: 100px;
+  height: 20px;
+  background-color: #fff;
+  color: #000;
+  position: absolute;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
