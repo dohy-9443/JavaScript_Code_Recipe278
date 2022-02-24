@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.touch {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
