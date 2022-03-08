@@ -16,10 +16,12 @@
 .wrapper {
   display: flex;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .slide {
   width: 100%;
+  margin-right: 20px;
   height: 500px;
   background-color: tan;
   display: flex;
@@ -29,12 +31,15 @@
   font-weight: bold;
 }
 
+
+
 .wrapper .slide:nth-child(2) {
   background-color: cadetblue;
 }
 
 .wrapper .slide:last-child {
   background-color: lightcoral;
+  margin-right: 0;
 }
 
 .paging {
