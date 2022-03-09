@@ -153,16 +153,16 @@ function imgSlide(w, p) {
 
   }, false)
 
-  // 이벤트만 드래그로 바뀌고 터치 이벤트랑 똑같음!
-  w.addEventListener('dragstart', (e) => {
+  // 이벤트만 pointer로 바뀌고 터치 이벤트랑 똑같음!
+  w.addEventListener('pointerdown', (e) => {
     let x = e.clientX;
 
     firstX = x;
 
     return firstX
-  }, false)
+  })
 
-  w.addEventListener('dragend', (e) => {
+  w.addEventListener('pointerup', (e) => {
 
     let x = e.clientX
     lastX = x;
@@ -225,7 +225,7 @@ function imgSlide(w, p) {
       }
 
     }
-  }, false)
+  })
 
   // next 버튼 클릭
   nextBtn.addEventListener('click', function() {
@@ -298,3 +298,16 @@ function imgSlide(w, p) {
 }
 
 imgSlide(wrapper, pagingBtns)
+
+
+const point = document.querySelector('.pointer')
+
+point.addEventListener('pointerdown', (e) => {
+  console.log(e.clientX)
+})
+
+point.addEventListener('pointerup', (e) => {
+  console.log(e.clientX)
+})
+
+
