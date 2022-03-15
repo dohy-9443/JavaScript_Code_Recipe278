@@ -12,8 +12,10 @@ function imgSlide(w, p) {
   var i = 0; // 슬라이드 현재 버튼 변수
 
 
-  w.style.width = `${p.length * 100 / 3}%` // 시작할 때 슬라이드 감싸는 div 넓이값
-  w.style.transform = `translateX(10%)`; // 시작할 때 슬라이드 감싸는 div translate 값
+  // w.style.width = `${p.length * 100 / 3}%` // 시작할 때 슬라이드 감싸는 div 넓이값
+  w.style.width = `${p.length * 100}%`
+  // w.style.transform = `translateX(10%)`; // 시작할 때 슬라이드 감싸는 div translate 값
+  w.style.transform = `translateX(0%)`; // 시작할 때 슬라이드 감싸는 div translate 값
 
   // pagination 버튼 클릭부터 시작
   p.forEach((item, index) => {
@@ -40,7 +42,8 @@ function imgSlide(w, p) {
       p[i].classList.add('active');
       
       // 슬라이드 현재 index만큼 이동
-      w.style.transform = `translateX(${-i * 100/p.length + 10 }%)`;
+      // w.style.transform = `translateX(${-i * 100/p.length + 10 }%)`;
+      w.style.transform = `translateX(${-i * 100/p.length}%)`;
       
     })
 
@@ -88,7 +91,8 @@ function imgSlide(w, p) {
         p[i].classList.add('active');
     
         // 슬라이드 이동
-        w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        w.style.transform = `translateX(${-i * 100/p.length}%)`;
 
         // i가 슬라이드 갯수 - 2 적을 때 ( 마지막 슬라이드 )
       } else if (i === p.length - 2) {
@@ -107,7 +111,8 @@ function imgSlide(w, p) {
         p[i].classList.add('active');
     
         // 슬라이드 이동
-        w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        w.style.transform = `translateX(${-i * 100/p.length}%)`;
       }
 
     // 시작값이 마지막값보다 작으면
@@ -130,7 +135,8 @@ function imgSlide(w, p) {
         slides[i].classList.add('active');
         p[i].classList.add('active');
     
-        w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        w.style.transform = `translateX(${-i * 100/p.length}%)`;
 
         // i 가 0 일 때
       } else if (i === 0) {
@@ -146,7 +152,8 @@ function imgSlide(w, p) {
         slides[i].classList.add('active');
         p[i].classList.add('active');
     
-        w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        w.style.transform = `translateX(${-i * 100/p.length}%)`;
       }
 
     }
@@ -181,7 +188,8 @@ function imgSlide(w, p) {
         slides[i].classList.add('active');
         p[i].classList.add('active');
     
-        w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        w.style.transform = `translateX(${-i * 100/p.length}%)`;
       } else if (i === p.length - 2) {
         i = p.length - 1;
         p.forEach((reItem) => {
@@ -193,7 +201,8 @@ function imgSlide(w, p) {
         slides[i].classList.add('active');
         p[i].classList.add('active');
     
-        w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        w.style.transform = `translateX(${-i * 100/p.length}%)`;
       }
 
     } else {
@@ -209,7 +218,8 @@ function imgSlide(w, p) {
         slides[i].classList.add('active');
         p[i].classList.add('active');
     
-        w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        w.style.transform = `translateX(${-i * 100/p.length}%)`;
       } else if (i === 0) {
         i = 0;
         p.forEach((reItem) => {
@@ -221,7 +231,8 @@ function imgSlide(w, p) {
         slides[i].classList.add('active');
         p[i].classList.add('active');
     
-        w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+        w.style.transform = `translateX(${-i * 100/p.length}%)`;
       }
 
     }
@@ -242,11 +253,13 @@ function imgSlide(w, p) {
       slides[i].classList.add('active');
       p[i].classList.add('active');
   
-      w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+      // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+      w.style.transform = `translateX(${-i * 100/p.length}%)`;
     } else if (i === p.length) {
       i = p.length
       
-      w.style.transform = `translateX(${-clickNum * 100/p.length + 10}%)`;
+      // w.style.transform = `translateX(${-clickNum * 100/p.length + 10}%)`;
+      w.style.transform = `translateX(${-i * 100/p.length}%)`;
       
       p.forEach((item) => {
         item.classList.remove('active');
@@ -277,7 +290,8 @@ function imgSlide(w, p) {
       slides[i].classList.add('active');
       p[i].classList.add('active');
   
-      w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+      // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+      w.style.transform = `translateX(${-i * 100/p.length}%)`;
     } else if (i === 0) {
       i = 0;
 
@@ -291,7 +305,8 @@ function imgSlide(w, p) {
       slides[i].classList.add('active');
       p[i].classList.add('active');
   
-      w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+      // w.style.transform = `translateX(${-i * 100/p.length + 10}%)`;
+      w.style.transform = `translateX(${-i * 100/p.length}%)`;
     }
   })
 
